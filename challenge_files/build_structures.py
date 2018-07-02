@@ -9,8 +9,6 @@ import random
 %%time
 slices = os.listdir("../mpd/data")
 
-#i might use a set for songs, i suppose they are fast. Its size is the index for the next song
-#a dictionary for playlists, a dictionary for songs where i keep the playlist they are in? 
 set_of_tracks = set()
 list_of_tracks = []
 track_indexes = {}
