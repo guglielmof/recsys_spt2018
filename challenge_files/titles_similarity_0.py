@@ -12,26 +12,26 @@ import math
 
 
 #code used to build the recommendation in case of seed O.
-s_id2spt = utils.jload("../data/s_id2spt.json")
+s_id2spt = utils.jload("./s_id2spt.json")
 
 
 q = 10
 
-p2s_test = utils.jload("../data/test/p2s.json")
-p2s_test = utils_matrix.load_test_set("../files", "track")
-p2t = utils.jload("../data/words/p2t_c.json")
-w2p = utils.jload("../data/test/words/t2p.json")
+p2s_test = utils.jload("./p2s.json")
+p2s_test = utils_matrix.load_test_set("./", "track")
+p2t = utils.jload("./p2t_c.json")
+w2p = utils.jload("./t2p.json")
 
 
-s2p = utils.jload("../data/validation/s2p.json")
+s2p = utils.jload("./s2p.json")
 s2p = {s: set(p) for s, p in s2p.items()}
 
 
-t_id2t = utils.jload("../data/t_id2t.json")
+t_id2t = utils.jload("./t_id2t.json")
 t2t_id = {t: i for i, t in enumerate(t_id2t)}
 
 
-S = np.load("../data/words/similarity_matrices/S_titles.npy")
+S = np.load("./S_titles.npy")
 
 
 
