@@ -47,33 +47,33 @@ def train_mod_comb(test_set, bucket, lp, s_id2spt, selection, K, q):
 val_set_keys = set()
 
 ##------------------TEST------------------###
-K = sps.load_npz("../data/test/kernels/K.npz")
+K = sps.load_npz("./K.npz")
 print("K loaded")
 utils.fl()
-q = np.load("../data/test/kernels/q_3.npy")
-p2s_test = utils_matrix.load_test_set("../files", "track")
-p2s_train = utils.jload("../data/test/p2s.json")
-p2t = utils.jload("../data/words/p2t.json")
-s2p = utils.jload("../data/test/s2p.json")
+q = np.load("./q.npy")
+p2s_test = utils_matrix.load_test_set("./", "track")
+p2s_train = utils.jload("./p2s.json")
+p2t = utils.jload("./p2t_c.json")
+s2p = utils.jload("./s2p.json")
 ##----------------END TEST----------------###
 
 
-s_id2spt = utils.jload("../data/s_id2spt.json")
+s_id2spt = utils.jload("./s_id2spt.json")
 
 for s in s2p:
 	s2p[s] = set(s2p[s])
 
 
 ###---------------BUILD SELECTION---------------###
-t2p = utils.jload("../data/words/t2p_filt.json")
+t2p = utils.jload("./t2p_filt.json")
 
 
-t_id2t = utils.jload("../data/words/t_id2t.json")
+t_id2t = utils.jload("./t_id2t.json")
 t2t_id = {}
 for i, t in enumerate(t_id2t):
 	t2t_id[t] = i
 
-S = np.load("../data/words/similarity_matrices/S_titles.npy")
+S = np.load("./S_titles.npy")
 
 
 w2pop = {}
