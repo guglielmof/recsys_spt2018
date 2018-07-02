@@ -101,6 +101,6 @@ Ku = Rute.dot(RutrT)
 print("Ku built with shape: "+str(Ku.shape))
 utils.fl()
 
-sps.save_npz("./%s_%.1f"%(test_seed, alpha, utr_str, itr_str), Ku)
+sps.save_npz("./%s_%.1f"%(test_seed, alpha), Ku)
 
 print("done! time needed: "+str(time.time()-t))
