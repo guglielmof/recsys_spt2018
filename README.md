@@ -1,4 +1,5 @@
 # recsys_spt2018
+add challenge set and mdp/data containing data files to main directory
 How to build recommendations:
 1) run build_structures.py
 2) run full_kernel_songs.py
