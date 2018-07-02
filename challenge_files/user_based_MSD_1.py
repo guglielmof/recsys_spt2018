@@ -18,12 +18,12 @@ test_seed = '1'
 q = 1
 
 
-s_id2spt = utils.jload("../data/s_id2spt.json")
+s_id2spt = utils.jload("./s_id2spt.json")
 ####--------------- TEST ---------------####
-s2p = utils.jload("../data/test/s2p.json")
-p2s = utils.jload("../data/test/p2s.json")
-p2s_test = utils_matrix.load_test_set("../files", "track")
-Ku = sps.load_npz("../data/test/user_based/similarity_matrices/1_50.npz")
+s2p = utils.jload("./s2p.json")
+p2s = utils.jload("./p2s.json")
+p2s_test = utils_matrix.load_test_set("./", "track")
+Ku = sps.load_npz("./1_0.5.npz")
 ####--------------- TEST ---------------####
 
 
@@ -82,4 +82,4 @@ for user in u2u_id:
 			recommendation[str(user)].append(track)
 		k += 1
 
-utils.save_recommendation("../sub_29_06_aggressive/1_User_based_alfa_05_q_1.csv", recommendation)
+utils.save_recommendation("./1.csv", recommendation)
