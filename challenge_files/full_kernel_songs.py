@@ -12,7 +12,7 @@ element of the kernel matrix we will have the cosine similarity between represen
 '''
 
 #s2p = utils.jload("../data/validation/s2p.json")
-s2p = utils.jload("../data/test/s2p.json")
+s2p = utils.jload("./s2p.json")
 for s in s2p:
 	s2p[s] = set(s2p[s])
 
@@ -63,9 +63,9 @@ utils.fl()
 
 print "Saving X...",
 utils.fl()
-np.save("../data/test/kernels/data_X.npy", data)
-np.save("../data/test/kernels/col_X.npy", col)
-np.save("../data/test/kernels/row_X.npy", row)
+np.save("./data_X.npy", data)
+np.save("./col_X.npy", col)
+np.save("./row_X.npy", row)
 print "done!"
 utils.fl()
 
@@ -90,8 +90,8 @@ utils.fl()
 print "Saving K...",
 utils.fl()
 #np.save("../data/training/kernels/K.npy", K)
-sps.save_npz("../data/test/kernels/K_set", K)
+sps.save_npz("./K.npy", K)
 print "done!",
 utils.fl()
 
-np.save("../data/test/kernels/q_set.npy",  np.mean(K, axis=0)) 
+np.save("./q.npy",  np.mean(K, axis=0)) 
