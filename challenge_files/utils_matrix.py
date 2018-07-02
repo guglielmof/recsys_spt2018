@@ -68,13 +68,13 @@ class load_matrix_worker(threading.Thread):
 
 def load_test_set(dir_name, item_class="track"):
 	if(item_class == "track"):
-		file_name = "/tracks/index_of_track_complete.txt"
+		file_name = "s_id2spt.json"
 	elif(item_class == "artist"):
 		file_name = "/artists/index_of_artist.txt"	
 	with open(dir_name+file_name, "r") as F:
 	    item_indexes = json.load(F)
 	test_set = {'0':{}, '5':{}, '10':{}, '25':{}, '100':{}, '1':{}}
-	with open(dir_name+"/ch/challenge_set.json") as F:
+	with open(dir_name+"challenge_set.json") as F:
 	    challenge_struc = json.load(F)
 	    for p in challenge_struc['playlists']:
 		test_set[str(p['num_samples'])][p['pid']]=[]
