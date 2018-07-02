@@ -11,7 +11,7 @@ import random
 import math
 
 
-s2p = utils.jload("../data/training/s2p.json")
+s2p = utils.jload("./s2p.json")
 
 print "building R...", 
 utils.fl()
@@ -30,7 +30,7 @@ for s in s2p:
 
 print("done"); utils.fl()
 lengths = sps.csr_matrix(np.array(lengths))
-'''
+
 print "building P csc...",
 utils.fl()
 RT = sps.csc_matrix((data, (col, row)))
@@ -42,10 +42,10 @@ utils.fl()
 
 print "saving P csc...",
 utils.fl()
-sps.save_npz("../data/training/item_based/P_csc.npz", P)
+sps.save_npz("./P_csc.npz", P)
 print "done"
 utils.fl()
-'''
+
 print "building P...",
 RT = sps.csr_matrix((data, (col, row)))
 R =  sps.csr_matrix((data, (row, col)))
@@ -56,6 +56,6 @@ utils.fl()
 
 print "saving P...",
 utils.fl()
-sps.save_npz("../data/training/item_based/P.npz", P)
+sps.save_npz("./P.npz", P)
 print "done"
 utils.fl()
