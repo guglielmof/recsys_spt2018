@@ -175,7 +175,8 @@ for i,pl in enumerate(chplaylists):
 		p2t_c[pl['pid']] = ''
 
 json.dump(p2t_c, open("./p2t_c.json", "w"), indent=4)
-		
+titles_list = [t for t in t2pl if t!=""]
+json.dump(titles_list, open("./t_id2t.json", "w"))
 print "Number of titles not in the training", count
 print "Number of empty titles", skipped
 
