@@ -19,7 +19,7 @@ q = 10
 
 p2s_test = utils.jload("../data/test/p2s.json")
 p2s_test = utils_matrix.load_test_set("../files", "track")
-p2t = utils.jload("../data/words/p2t_filt.json")
+p2t = utils.jload("../data/words/p2t_c.json")
 w2p = utils.jload("../data/test/words/t2p.json")
 
 
@@ -57,7 +57,7 @@ for t in w2pop:
 P = sps.csr_matrix((data, (col, row))) #the matrix needs to be transposed
 
 recommendation = {}
-for user in pl_test_list:
+for user in p2t:
 	row = S[t2t_id[p2t[user]], :]**q
 	recommendation[user] = [s_id2spt[s] for s in utils.scores_sorter(P.dot(row))][:500]
 
