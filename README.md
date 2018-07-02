@@ -4,8 +4,8 @@ How to build recommendations:
 1) run build_structures.py
 2) run full_kernel_songs.py
 3) run create_Ku.py with parameters 1 and 0.5
-4) run words_similarity_builder.py
-5) run create_pl2title.py
+4) run create_pl2title.py
+5) run words_similarity_builder.py
 6) run create_Pu.py
 7) run titles_similarity_0.py
 8) run user_based_MSD_1.py
