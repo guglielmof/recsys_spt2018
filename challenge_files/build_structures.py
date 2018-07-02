@@ -45,6 +45,6 @@ for i, s in enumerate(slices):
 
 
 
-json.dump(tracks_in_playlist, open("../data/p2s.json", "w"))
-json.dump(list_of_tracks, open("../data/s_spt2id.json", "w"))
-json.dump(playlists_containing_track, open("../data/test/s2p.json", "w"))
+json.dump(tracks_in_playlist, open("./p2s.json", "w"))
+json.dump(list_of_tracks, open("./s_spt2id.json", "w"))
+json.dump(playlists_containing_track, open("./s2p.json", "w"))
