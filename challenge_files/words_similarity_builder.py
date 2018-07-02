@@ -2,9 +2,6 @@ import sys
 import numpy as np
 import os
 import math
-
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-
 import utils
 import scipy.sparse as sps
 import random
@@ -15,7 +12,7 @@ import random
 
 def titles_similarity(t2rep, t2t_id, n_songs):
 
-	A = np.zeros((len(t2t_id), r2r_id))
+	A = np.zeros((len(t2t_id), n_songs))
 	for title in t2t_id:
 		for rep in t2rep[title]:
 			A[t2t_id[title], int(rep)] = 1.0
