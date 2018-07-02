@@ -1,7 +1,6 @@
 
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 import utils
 import numpy as np
 import json
@@ -62,4 +61,4 @@ for user in p2t:
 	recommendation[user] = [s_id2spt[s] for s in utils.scores_sorter(P.dot(row))][:500]
 
 #here you should specify the directory where to save the recommendation
-utils.save_recommendation("../sub_21_06/"+str(bucket)+".csv", recommendation)
+utils.save_recommendation("./"+str(bucket)+".csv", recommendation)
