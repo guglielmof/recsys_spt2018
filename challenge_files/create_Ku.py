@@ -16,9 +16,9 @@ t=time.time()
 
 
 ####--------------- TEST ---------------####
-s2p = utils.jload("../data/test/s2p.json")
-p2s = utils.jload("../data/test/p2s.json")
-p2s_test = utils_matrix.load_test_set("../files", "track")
+s2p = utils.jload("./s2p.json")
+p2s = utils.jload("./p2s.json")
+p2s_test = utils_matrix.load_test_set("./", "track")
 ####--------------- TEST ---------------####
 
 # ####------------ VALIDATION ------------####
@@ -101,6 +101,6 @@ Ku = Rute.dot(RutrT)
 print("Ku built with shape: "+str(Ku.shape))
 utils.fl()
 
-sps.save_npz("../data/training/user_based_matrices/%s_%.1f"%(test_seed, alpha, utr_str, itr_str), Ku)
+sps.save_npz("./%s_%.1f"%(test_seed, alpha, utr_str, itr_str), Ku)
 
 print("done! time needed: "+str(time.time()-t))
