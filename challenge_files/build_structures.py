@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import numpy.random as npr
 import random
 
-%%time
 slices = os.listdir("../mpd/data")
 
 set_of_tracks = set()
@@ -21,8 +20,6 @@ tracks_in_playlist = {}
 val_set = {}
 field = "track_uri"
 pls_pop = {}
-for i in v_set:
-    val_set[i] = {}
 
 for i, s in enumerate(slices):
     sys.stdout.write("\r{0}>".format(str(i/10)+"%"))
