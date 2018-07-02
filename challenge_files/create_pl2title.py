@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import sys, os
 #sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)
-
+import utils
 import json
 import pickle
 import string
@@ -198,7 +198,12 @@ f.writelines(["%s\t%d\n" %(v,k) for k,v in ch_list])
 f.close()
 
 
-
-
+p2s = utils.jload("./p2s.json")
+t2s = {}
+for t in t2pl:
+	t2s[t] = []
+	for p in t2pl:
+		t2s[t]+=p2s[str(p)]
+json.dump(t2s, open("./t2s.json", "w"))
 
 
