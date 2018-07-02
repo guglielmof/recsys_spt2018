@@ -31,17 +31,17 @@ def titles_similarity(t2rep, t2t_id, n_songs):
 	return Kn
 
 
-t_id2t = utils.jload("../data/t_id2t.json")
+t_id2t = utils.jload("./t_id2t.json")
 t2t_id = {t:i for i, t in enumerate(t_id2t.items())}
 
 
-t2rep = utils.jload("../data/words/test/t2s.json")
+t2rep = utils.jload("./t2s.json")
 t2rep = {t:set(rep) for t, rep in enumerate(t2rep.items())}
-rep_size = len(utils.jload("../data/test/s2p.json"))
+rep_size = len(utils.jload("./s2p.json"))
 
 
 for t in t2rep:
 	t2rep[t] = set(t2rep[t]) 
 
 sim = titles_similarity(t2rep, t2t_id, rep_size)
-np.save("../data/words/similarity_matrices/S_titles.npy", sim)
+np.save("./S_titles.npy", sim)
