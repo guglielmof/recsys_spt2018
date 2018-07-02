@@ -20,17 +20,17 @@ q = float(sys.argv[2])
 test_seed = sys.argv[3]
 
 #p2s_test = utils.jload("../data/validation/test/p2s.json")
-p2s_test = utils_matrix.load_test_set("../files")
-s_id2spt = utils.jload("../data/s_id2spt.json")
+p2s_test = utils_matrix.load_test_set("./")
+s_id2spt = utils.jload("./s_id2spt.json")
 print "loading P...",
 utils.fl()
-P = sps.load_npz("../data/test/item_based/P.npz")
+P = sps.load_npz("./P.npz")
 print "done"
 utils.fl()
 
 print "loading P csc...",
 utils.fl()
-P_csc = sps.load_npz("../data/test/item_based/P_csc.npz")
+P_csc = sps.load_npz("./P_csc.npz")
 print "done"
 utils.fl()
 
@@ -47,4 +47,4 @@ for u in sorted(p2s_test[test_seed].keys()):
 	utils.fl()
 
 #here you should specify the directory where to save the recommendation
-utils.save_recommendation("../sub_29_06_conservative/sub_%s.csv"%(test_seed), recommendation)
+utils.save_recommendation("./%s.csv"%(test_seed), recommendation)
