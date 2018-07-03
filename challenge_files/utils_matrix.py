@@ -18,6 +18,7 @@ import numpy as np
 import scipy.sparse as sps
 import json
 import threading
+import utils
 
 def load_matrix(width, bands_height, dir_name):
 	'''
@@ -87,14 +88,15 @@ def load_test_set(dir_name, item_class="track"):
 	elif(item_class == "artist"):
 		file_name = "/artists/index_of_artist.txt"	
 	with open(dir_name+file_name, "r") as F:
-	    item_indexes = json.load(F)
+		it_idx = utils.jload(file_name)
+		item_indexes = {t:i for i,t in enumerate(it_idx)}
 	test_set = {'0':{}, '5':{}, '10':{}, '25':{}, '100':{}, '1':{}}
 	with open(dir_name+"challenge_set.json") as F:
-	    challenge_struc = json.load(F)
-	    for p in challenge_struc['playlists']:
-		test_set[str(p['num_samples'])][p['pid']]=[]
-		for t in p['tracks']:
-		    test_set[str(p['num_samples'])][p['pid']].append(item_indexes[t[item_class+'_uri']])
+		challenge_struc = json.load(F)
+		for p in challenge_struc['playlists']:
+			test_set[str(p['num_samples'])][p['pid']]=[]
+			for t in p['tracks']:
+				test_set[str(p['num_samples'])][int(p['pid'])].append(item_indexes[t[item_class+'_uri']])
 
 	return(test_set)
 

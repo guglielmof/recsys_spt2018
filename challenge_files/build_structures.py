@@ -52,8 +52,8 @@ for i, s in enumerate(slices):
                     set_of_tracks.add(t[field])
                     list_of_tracks.append(t[field])
                     playlists_containing_track[pos] =[]
-                    tracks_in_playlist[p['pid']].append(track_indexes[t[field]])
-                    playlists_containing_track[track_indexes[t[field]]].append(p['pid'])
+                tracks_in_playlist[p['pid']].append(track_indexes[t[field]])
+                playlists_containing_track[track_indexes[t[field]]].append(p['pid'])
 
 
 
