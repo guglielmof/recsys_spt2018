@@ -33,7 +33,7 @@ q = 10
 p2s_test = utils.jload("./p2s.json")
 p2s_test = utils_matrix.load_test_set("./", "track")
 p2t = utils.jload("./p2t_c.json")
-w2p = utils.jload("./t2p.json")
+w2p = utils.jload("./t2p_filt.json")
 
 
 s2p = utils.jload("./s2p.json")
