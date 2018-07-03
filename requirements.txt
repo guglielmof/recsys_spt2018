@@ -3,3 +3,7 @@ Python 2.7 with
  - scipy
  - cvxopt
  - gensim
+
+estimated memory: 80Gb
+estimated time: 12 hours
+estimates disk space 150Gb
