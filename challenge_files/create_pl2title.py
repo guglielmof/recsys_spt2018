@@ -55,7 +55,7 @@ def damerau_levenshtein_distance(s1, s2):
  
 	return float(d[lenstr1-1,lenstr2-1])
 
-'''
+
 t2pl = {}
 for i in range(0,1000000,1000):
 	fname = "mpd.slice.%d-%d.json" %(i, i+999)
@@ -72,7 +72,7 @@ for i in range(0,1000000,1000):
 	
 pickle.dump(t2pl, open("./structures/t2pl.pickle", "w"))
 print "Saved"
-'''
+
 
 def check_punct(s):
 	for c in string.punctuation:
