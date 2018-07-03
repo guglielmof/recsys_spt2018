@@ -42,8 +42,7 @@ def train_mod(test_set, bucket, lp, s_id2spt, selection, K, q):
 	for i in test_set:
 		recommendation[i] = modello.get_recommendation(i, bucket)
 	#here you should specify the directory where to save the recommendation
-	utils.save_recommendation("../sub_21_06/"+str(bucket)+".csv", recommendation)
-	return r,n,c
+	utils.save_recommendation("../"+str(bucket)+".csv", recommendation)
 
 
 def train_mod_comb(test_set, bucket, lp, s_id2spt, selection, K, q):
