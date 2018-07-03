@@ -23,7 +23,7 @@ import utils_matrix
 import math
 
 
-
+bucket = '0'
 #code used to build the recommendation in case of seed O.
 s_id2spt = utils.jload("./s_id2spt.json")
 
