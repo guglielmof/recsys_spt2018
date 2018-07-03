@@ -16,7 +16,12 @@ How to build recommendations:
 12) run selected_KOMD_100.py with parameters 100 50000
 13) run merge_csv.sh 
 
-Most of the steps above can be parallelized as shown in the following figure. The estimated time reported in the requirements is calculated considering a sequential execution.
+estimated memory: 80Gb
+estimated time: 20 hours
+estimates disk space 150Gb
+
+
+Most of the steps above can be parallelized as shown in the following figure. The estimated time is calculated considering a sequential execution.
 
 ![alt text](https://raw.githubusercontent.com/guglielmof/recsys_spt2018/master/schema.png)
  
