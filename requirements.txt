@@ -1,4 +1,5 @@
 Python 2.7 with
- - numpy 1.14.3
- - scipy 1.1.0
- - cvxopt 1.2.0
+ - numpy 
+ - scipy
+ - cvxopt
+ - gensim
