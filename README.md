@@ -13,4 +13,4 @@ How to build recommendations:
 10) run item_based_MSD_5_10_25.py with parameters 0.7 0.4 10
 11) run item_based_MSD_5_10_25.py with parameters 0.7 0.4 25
 12) run selected_KOMD_100.py with parameters 100 50000
-13) merge different submission's parts with commands like cat 
+13) run merge_csv.sh 
