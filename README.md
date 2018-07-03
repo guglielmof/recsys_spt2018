@@ -15,3 +15,5 @@ How to build recommendations:
 11) run item_based_MSD_5_10_25.py with parameters 0.7 0.4 25
 12) run selected_KOMD_100.py with parameters 100 50000
 13) run merge_csv.sh 
+
+Step 2, 3, 4 and 6 can be executed in parallel, like steps from 8 to 12. The estimated time is calculated considering a sequential execution.
