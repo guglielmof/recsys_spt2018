@@ -105,7 +105,7 @@ utils.fl()
 print "Saving K...",
 utils.fl()
 #np.save("../data/training/kernels/K.npy", K)
-sps.save_npz("./K.npy", K)
+sps.save_npz("./K.npz", K)
 print "done!",
 utils.fl()
 
