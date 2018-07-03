@@ -48,12 +48,8 @@ t2t_id = {t:i for i, t in enumerate(t_id2t)}
 
 
 t2rep = utils.jload("./t2s.json")
-t2rep = {t:set(rep) for t, rep in enumerate(t2rep.items())}
+t2rep = {t:set(rep) for t, rep in t2rep.items()}
 rep_size = len(utils.jload("./s2p.json"))
-
-
-for t in t2rep:
-	t2rep[t] = set(t2rep[t]) 
 
 sim = titles_similarity(t2rep, t2t_id, rep_size)
 np.save("./S_titles.npy", sim)
