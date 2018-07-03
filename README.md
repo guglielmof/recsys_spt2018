@@ -16,6 +16,7 @@ How to build recommendations:
 12) run selected_KOMD_100.py with parameters 100 50000
 13) run merge_csv.sh 
 
-Step 2, 3, 4 and 6 can be executed in parallel, like steps from 8 to 12. The estimated time is calculated considering a sequential execution.
+Most of the steps above can be parallelized as shown in the following figure. The estimated time reported in the requirements is calculated considering a sequential execution.
+
 ![alt text](https://raw.githubusercontent.com/guglielmof/recsys_spt2018/master/schema.png)
  
