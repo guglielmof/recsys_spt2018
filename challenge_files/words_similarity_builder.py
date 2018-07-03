@@ -44,7 +44,7 @@ def titles_similarity(t2rep, t2t_id, n_songs):
 
 
 t_id2t = utils.jload("./t_id2t.json")
-t2t_id = {t:i for i, t in enumerate(t_id2t.items())}
+t2t_id = {t:i for i, t in enumerate(t_id2t)}
 
 
 t2rep = utils.jload("./t2s.json")
