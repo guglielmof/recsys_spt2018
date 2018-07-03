@@ -53,7 +53,7 @@ w2pop = {}
 for i, w in enumerate(t2t_id):
 	w2pop[w] = {}
 	for pl in w2p[w]:
-		for song in set(p2s_train[str(pl)]):
+		for song in set(p2s[str(pl)]):
 			if(song in w2pop[w]):
 				w2pop[w][song]+=1
 			else:
