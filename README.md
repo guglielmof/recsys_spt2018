@@ -16,9 +16,9 @@ How to build recommendations:
 12) run selected_KOMD_100.py with parameters 100 50000
 13) run merge_csv.sh 
 
-estimated memory: 80Gb
-estimated time: 20 hours
-estimates disk space 150Gb
+estimated memory: 80Gb</br>
+estimated time: 20 hours</br>
+estimates disk space 150Gb</br>
 
 
 Most of the steps above can be parallelized as shown in the following figure. The estimated time is calculated considering a sequential execution.
