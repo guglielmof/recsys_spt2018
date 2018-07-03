@@ -60,10 +60,10 @@ def train_mod_comb(test_set, bucket, lp, s_id2spt, selection, K, q):
 val_set_keys = set()
 
 ##------------------TEST------------------###
-K = sps.load_npz("./K.npz")
+K = sps.load_npz("K.npz")
 print("K loaded")
 utils.fl()
-q = np.load("./q.npy")
+q = np.load("q.npy")
 p2s_test = utils_matrix.load_test_set("./", "track")
 p2s_train = utils.jload("./p2s.json")
 p2t = utils.jload("./p2t_c.json")
