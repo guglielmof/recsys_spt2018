@@ -96,9 +96,10 @@ json.dump(titles_list, open("./t_id2t.json", "w"))
 p2s = utils.jload("./p2s.json")
 t2s = {}
 for t in t2pl:
-	t2s[t] = []
-	for p in t2pl:
-		t2s[t]+=p2s[str(p)]
+	if t!='':
+		t2s[t] = []
+		for p in t2pl[t]:
+			t2s[t]+=p2s[str(p)]
 json.dump(t2s, open("./t2s.json", "w"))
 
 
