@@ -1,6 +1,9 @@
 # recsys_spt2018
-put data in mdp/data inside main directory</br>
-put challenge set in main directory</br>
+
+Environment setting
+* Put data in mdp/data inside main directory</br>
+* Put challenge set in main directory</br>
+
 How to build recommendations:
 1) run build_structures.py
 2) run full_kernel_songs.py
