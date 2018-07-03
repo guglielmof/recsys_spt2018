@@ -75,4 +75,4 @@ for user in p2t:
 	recommendation[user] = [s_id2spt[s] for s in utils.scores_sorter(P.dot(row))][:500]
 
 #here you should specify the directory where to save the recommendation
-utils.save_recommendation("./"+str(bucket)+".csv", recommendation)
+utils.save_recommendation("./"+str(bucket)+".csv", recommendation, intestation=True)
