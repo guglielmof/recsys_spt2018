@@ -814,7 +814,7 @@ class CF_KOMD_selected:
                 lp=0.1, spr=False, verbose=True, items_list = None):
         #super(CF_KOMD, self).__init__(data, verbose)
         self.lambda_p = lp
-        self.q_=co.matrix(q, (q.shape[0], 1))
+        self.q_=co.matrix(q, (q.shape[1], 1))
         self.verbose = verbose
         self.items_list = items_list
 
