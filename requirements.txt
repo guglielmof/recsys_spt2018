@@ -5,5 +5,5 @@ Python 2.7 with
  - gensim
 
 estimated memory: 80Gb
-estimated time: 12 hours
+estimated time: 20 hours
 estimates disk space 150Gb
