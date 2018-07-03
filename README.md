@@ -7,7 +7,7 @@ How to build recommendations:
 3) run create_Ku.py with parameters 1 and 0.5
 4) run create_pl2title.py
 5) run words_similarity_builder.py
-6) run create_Pu.py
+6) run calc_P.py
 7) run titles_similarity_0.py
 8) run user_based_MSD_1.py
 9) run item_based_MSD_5_10_25.py with parameters 0.7 0.4 5
