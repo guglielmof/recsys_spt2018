@@ -17,5 +17,5 @@ How to build recommendations:
 13) run merge_csv.sh 
 
 Step 2, 3, 4 and 6 can be executed in parallel, like steps from 8 to 12. The estimated time is calculated considering a sequential execution.
-![alt text](http://recsys_spt2018/schema.png)
+![alt text](recsys_spt2018/schema.png)
  
