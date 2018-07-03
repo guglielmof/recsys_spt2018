@@ -42,6 +42,28 @@ def titles_similarity(t2rep, t2t_id, n_songs):
 
 	return Kn
 
+def titles_similarity_sparse(t2rep, t2t_id, cols_num):
+	data = []
+	col = []
+	row = []
+
+	for title in t2t_id:
+		for rep in t2rep[title]:
+			data.append(1.0)
+			row.append(t2t_id[title])
+			col.append(rep)
+
+	A = sps.csr_matrix((data, (row, col)))
+ 	AT = sps.csr_matrix((data, (col, row)))
+ 	K = (A.dot(AT)).todense()
+ 	for i in range(K.shape[0]):
+ 		if K[i,i]==0:
+ 			K[i,i] = 1.0
+ 	n = K.shape[0]
+	d = np.array([[K[i,i] for i in range(n)]])
+	Kn = K / np.sqrt(np.dot(d.T,d))
+
+	return Kn
 
 t_id2t = utils.jload("./t_id2t.json")
 t2t_id = {t:i for i, t in enumerate(t_id2t)}
@@ -51,5 +73,5 @@ t2rep = utils.jload("./t2s.json")
 t2rep = {t:set(rep) for t, rep in t2rep.items()}
 rep_size = len(utils.jload("./s2p.json"))
 
-sim = titles_similarity(t2rep, t2t_id, rep_size)
+sim = titles_similarity_sparse(t2rep, t2t_id, rep_size)
 np.save("./S_titles.npy", sim)
