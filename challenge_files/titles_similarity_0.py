@@ -75,7 +75,7 @@ for s in s2p:
 global_popularity = np.argsort(-global_popularity)
 
 recommendation = {}
-for user in p2t:
+for user in p2s_test[bucket]:
 	if user in t2t_id:
 		row = S[t2t_id[p2t[user]], :]**q
 		recommendation[user] = [s_id2spt[s] for s in utils.scores_sorter(P.dot(row))][:500]
