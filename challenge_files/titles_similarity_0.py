@@ -76,11 +76,12 @@ global_popularity = np.argsort(-global_popularity)
 
 recommendation = {}
 for user in p2s_test[bucket]:
-	if user in t2t_id:
-		row = S[t2t_id[p2t[user]], :]**q
+	if p2t[str(user)] in t2t_id:
+		row = S[t2t_id[p2t[str(user)]], :]**q
 		recommendation[user] = [s_id2spt[s] for s in utils.scores_sorter(P.dot(row))][:500]
 	else:
 		recommendation[user] = [s_id2spt[s] for s in global_popularity[:500]]
+
 
 #here you should specify the directory where to save the recommendation
 utils.save_recommendation("./"+str(bucket)+".csv", recommendation, intestation=True)
