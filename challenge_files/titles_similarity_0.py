@@ -69,10 +69,18 @@ for t in w2pop:
 		row.append(t2t_id[t])
 P = sps.csr_matrix((data, (col, row))) #the matrix needs to be transposed
 
+global_popularity = np.zeros(len(s2p))
+for s in s2p:
+	global_popularity[int(s)] = len(s2p[s])
+global_popularity = np.argsort(-global_popularity)
+
 recommendation = {}
 for user in p2t:
-	row = S[t2t_id[p2t[user]], :]**q
-	recommendation[user] = [s_id2spt[s] for s in utils.scores_sorter(P.dot(row))][:500]
+	if user in t2t_id:
+		row = S[t2t_id[p2t[user]], :]**q
+		recommendation[user] = [s_id2spt[s] for s in utils.scores_sorter(P.dot(row))][:500]
+	else:
+		recommendation[user] = [s_id2spt[s] for s in global_popularity[:500]]
 
 #here you should specify the directory where to save the recommendation
 utils.save_recommendation("./"+str(bucket)+".csv", recommendation, intestation=True)
